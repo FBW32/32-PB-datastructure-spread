@@ -61,14 +61,15 @@ console.log(changedEmployee); // { name: 'David', role: 'Doctor' }
     isWhole(9, 2, 2, 5) ➞ false
     Once you have created a function, pass in an array as an argument which contains four elements - check if this method still outputs the correct result!
 */
-function isWhole(a, b, c, d) {
-    if ((a +  b + c + d) % 4 === 0)  {
+function isWhole(num1, num2, num3, num4) {
+    let total = num1 + num2 + num3 + num4;
+    let average = total / 4;
+    // console.log(average);
+    if (Number.isInteger(average)) {
         return true;
-} else {
-         return false;
-}
-
+    } else {
+        return false;
+    }
 }
 console.log(isWhole(1, 2, 3, 4)); // false
-console.log(isWhole(7, 2, 1, 2)); // true
-
+console.log(isWhole(2, 3, 4, 7)); // true
